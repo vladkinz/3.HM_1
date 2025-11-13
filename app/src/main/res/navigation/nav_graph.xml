@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.a3hm_1.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+    <action
+        android:id="@+id/action_mainFragment_to_detailFragment"
+        app:destination="@+id/detailFragment"/>
+</fragment>
+    <fragment
+        tools:layout="@layout/fragment_detail2"
+        android:label="fragment_detail"
+        android:id="@+id/detailFragment"
+        android:name="com.example.a3hm_1.DetailFragment">
+        <argument
+            android:name="serial"
+            app:argType="com.example.a3hm_1.SerialModel"/>
+    </fragment>
+</navigation>
