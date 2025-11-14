@@ -33,7 +33,7 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        loadData()
         adapter = SerialAdapter(listSerial, onClick = { model ->
             Log.d("ololo", "onViewCreated: ${model.name} ")
             val bundle = Bundle()
